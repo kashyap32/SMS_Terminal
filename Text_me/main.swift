@@ -5,7 +5,7 @@ import Foundation
 print("What would you like to text?")
 var usersMessage = readLine(stripNewline: true)
 if usersMessage != nil {
-    print("OK, that’s fine. Which phone number would you like to send this to?")
+    print("OK!!. Please Provide Phone number?")
     var toNumber = readLine(stripNewline: true)
     if toNumber != nil {
     
@@ -16,10 +16,8 @@ if usersMessage != nil {
     print (clockworkSMS)
     var clockworkURL = NSURL(string: clockworkSMS)
     if clockworkURL != nil {
-    // Now make the request and get the response!
     var responseData = NSData(contentsOfURL: clockworkURL!)
     if responseData != nil {
-    // Convert the NSData object into a String object
     var responseString = String(data: responseData!, encoding: NSUTF8StringEncoding)
     if responseString != nil {
     print(responseString!)
